@@ -1,4 +1,8 @@
 import { calcInventoryValue } from "../src/inventory";
+import { products } from "../src/products";
+
+
+
 
 describe("calcInventoryValue", () => {
   test("three products", () => {
