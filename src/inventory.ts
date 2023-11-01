@@ -1,19 +1,27 @@
 import InventoryItem from "./models/InventoryItem";
 
 export const inventory: InventoryItem[] = [
-    {
-      name: "motor",
-      price: 10.00,
+    { 
+        product: {
+            name: "motor",
+            price: 10.00
+        },
       quantity: 10,
+      
     },
     {
-      name: "sensor",
-      price: 12.50,
+        product: {
+            name: "sensor",
+            price: 12.50,
+        },
+      
       quantity: 4,
     },
     {
-      name: "LED",
-      price: 1.00,
+        product:{
+            name: "LED",
+            price: 1.00,      
+        },
       quantity: 20,
     },
   ];
@@ -25,7 +33,8 @@ export const inventory: InventoryItem[] = [
     let total = 0;
 
     for (const item of inventory) {
-      total += item.price * item.quantity;
+        //obj inside an obj, inventory item obj has a prod obj inside
+      total += item.product.price * item.quantity;
     }
   
     return total;

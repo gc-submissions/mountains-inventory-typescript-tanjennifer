@@ -1,5 +1,6 @@
+import Product from "./Product";
+
 export default interface InventoryItem {
-    name: string;
-    price: number;
+    product: Product;
     quantity: number;
   }
